@@ -1,59 +1,73 @@
 <template>  
-    <view class="container">
-		<!-- <button class="cu-btn bg-green shadow" @tap="LoadModal">
-			点我
-		</button> -->
-      <view class="user-section">
-		<image class="bg" src="/static/user-bg.jpg"></image>
-		<view class="user-info-box">
-			<view class="portrait-box">
-				<image class="portrait" src="/static/missing-face.png"></image>
+		<view class="container">
+		  <view class="user-section">
+			<image class="bg" src="/static/user-bg.jpg"></image>
+			<view class="user-info-box">
+				<view class="portrait-box">
+					<image class="portrait" src="/static/missing-face.png"></image>
+				</view>
+				<view class="info-box">
+					<text class="username">淋雨人</text>
+				</view>
 			</view>
-			<view class="info-box">
-				<text class="username">淋雨人</text>
+		  </view>
+		   <view class="history-section icon">
+				<list-cell icon="icon-iconfontweixin" iconColor="#e07472" title="我要充值0元" tips="您的会员还有3天过期"></list-cell>
+				<list-cell icon="icon-dizhi" iconColor="#5fcda2" title="充值记录" @eventClick="navTo('/pages/address/address')"></list-cell>
+				<list-cell icon="icon-share" iconColor="#9789f7" title="充点记录" tips="邀请好友赢10万大礼"></list-cell>
+				<list-cell icon="icon-pinglun-copy" iconColor="#ee883b" title="附近电站" tips="晒单抢红包"></list-cell>
+				<list-cell icon="icon-shoucang_xuanzhongzhuangtai" iconColor="#54b4ef" title="常见问题"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#5fcda2" title="电卡充值"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#9789f7" title="我要加盟"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#ee883b" title="我的消息"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#54b4ef" title="下载APP"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#e07472" title="关于我们" border=""></list-cell>
+				<list-cell icon="icon-iconfontweixin" iconColor="#e07472" title="我要充值0元" tips="您的会员还有3天过期"></list-cell>
+				<list-cell icon="icon-dizhi" iconColor="#5fcda2" title="充值记录" @eventClick="navTo('/pages/address/address')"></list-cell>
+				<list-cell icon="icon-share" iconColor="#9789f7" title="充点记录" tips="邀请好友赢10万大礼"></list-cell>
+				<list-cell icon="icon-pinglun-copy" iconColor="#ee883b" title="附近电站" tips="晒单抢红包"></list-cell>
+				<list-cell icon="icon-shoucang_xuanzhongzhuangtai" iconColor="#54b4ef" title="常见问题"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#5fcda2" title="电卡充值"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#9789f7" title="我要加盟"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#ee883b" title="我的消息"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#54b4ef" title="下载APP"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#e07472" title="关于我们" border=""></list-cell>
+				<list-cell icon="icon-iconfontweixin" iconColor="#e07472" title="我要充值0元" tips="您的会员还有3天过期"></list-cell>
+				<list-cell icon="icon-dizhi" iconColor="#5fcda2" title="充值记录" @eventClick="navTo('/pages/address/address')"></list-cell>
+				<list-cell icon="icon-share" iconColor="#9789f7" title="充点记录" tips="邀请好友赢10万大礼"></list-cell>
+				<list-cell icon="icon-pinglun-copy" iconColor="#ee883b" title="附近电站" tips="晒单抢红包"></list-cell>
+				<list-cell icon="icon-shoucang_xuanzhongzhuangtai" iconColor="#54b4ef" title="常见问题"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#5fcda2" title="电卡充值"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#9789f7" title="我要加盟"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#ee883b" title="我的消息"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#54b4ef" title="下载APP"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#e07472" title="关于我们" border=""></list-cell>
+			</view>
+			<!-- 底部操作菜单 -->
+			<view class="page-bottom">
+				<navigator url="/pages/index/index" open-type="switchTab" class="p-b-btn">
+					<text class="yticon icon-xiatubiao--copy"></text>
+					<text>充电中</text>
+				</navigator>
+				<navigator url="/pages/cart/cart" open-type="switchTab" class="p-b-btn">
+					<text class="yticon icon-gouwuche"></text>
+					<text>扫码充电</text>
+				</navigator>
+				<navigator url="/pages/cart/cart" open-type="switchTab" class="p-b-btn">
+					<text class="yticon icon-gouwuche"></text>
+					<text>我的</text>
+				</navigator>
 			</view>
 		</view>
-      </view>
-       <view class="history-section icon">
-			<list-cell icon="icon-iconfontweixin" iconColor="#e07472" title="我要充值0元" tips="您的会员还有3天过期"></list-cell>
-			<list-cell icon="icon-dizhi" iconColor="#5fcda2" title="充值记录" @eventClick="navTo('/pages/address/address')"></list-cell>
-			<list-cell icon="icon-share" iconColor="#9789f7" title="充点记录" tips="邀请好友赢10万大礼"></list-cell>
-			<list-cell icon="icon-pinglun-copy" iconColor="#ee883b" title="附近电站" tips="晒单抢红包"></list-cell>
-			<list-cell icon="icon-shoucang_xuanzhongzhuangtai" iconColor="#54b4ef" title="常见问题"></list-cell>
-			<list-cell icon="icon-shezhi1" iconColor="#5fcda2" title="电卡充值"></list-cell>
-			<list-cell icon="icon-shezhi1" iconColor="#9789f7" title="我要加盟"></list-cell>
-			<list-cell icon="icon-shezhi1" iconColor="#ee883b" title="我的消息"></list-cell>
-			<list-cell icon="icon-shezhi1" iconColor="#54b4ef" title="下载APP"></list-cell>
-			<list-cell icon="icon-shezhi1" iconColor="#e07472" title="关于我们" border=""></list-cell>
-		</view>
-		<!-- 底部操作菜单 -->
-		<view class="page-bottom">
-			<navigator url="/pages/index/index" open-type="switchTab" class="p-b-btn">
-				<text class="yticon icon-xiatubiao--copy"></text>
-				<text>充电中</text>
-			</navigator>
-			<navigator url="/pages/cart/cart" open-type="switchTab" class="p-b-btn">
-				<text class="yticon icon-gouwuche"></text>
-				<text>扫码充电</text>
-			</navigator>
-			<navigator url="/pages/cart/cart" open-type="switchTab" class="p-b-btn">
-				<text class="yticon icon-gouwuche"></text>
-				<text>我的</text>
-			</navigator>
-		</view>
-		<view class="cu-load load-modal" v-if="loadModal">
-			<!-- <view class="cuIcon-emojifill text-orange"></view> -->
-			<image src="/static/logo.png" mode="aspectFit"></image>
-			<view class="gray-text">加载中...</view>
-		</view>
-    </view>
 </template>
 <script>
 	import listCell from '@/components/mix-list-cell';
     export default {
-      components: {
-        listCell
-      },
+	  mounted() {
+	  },
+    components: {
+      listCell,
+    },
 	  data() {
 		return {
 			loadModal: false  
